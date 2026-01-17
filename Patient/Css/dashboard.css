@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#f8f9ff;
+}
+
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 70px;
+    background:#fff;
+}
+
+.navbar nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#333;
+}
+
+#nav-btn{
+    background:#5f6dfb;
+    color:#fff;
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+}
+
+
+.hero{
+    background:#5f6dfb;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px 70px;
+    color:#fff;
+    border-radius:20px;
+    margin:30px;
+}
+
+
+
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+}
+
+
+.speciality{
+    
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+}
+
+.speciality-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.spec{
+    background:#fff;
+    padding:20px;
+    border-radius:50%;
+}
+
+
+.doctors{
+    text-align:center;
+    padding:60px;
+}
+
+.doctor-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:30px;
+}
+
+.doctor-card{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+}
+
+.doctor-card img{
+    width:120px;
+}
+
+
+
+.more-btn{
+    margin-top:30px;
+    padding:10px 25px;
+    border:none;
+    border-radius:20px;
+}
+
+
+.cta{
+    background:#5f6dfb;
+    color:#fff;
+    margin:40px;
+    padding:50px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.cta button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:20px;
+}
+
+
+
