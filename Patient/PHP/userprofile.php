@@ -11,6 +11,7 @@ $user_id = $_SESSION['user_id'];
 
 $sql = "
 SELECT 
+    u.user_id,
     u.full_name,
     u.email,
     u.phone,
@@ -20,7 +21,7 @@ SELECT
     p.blood_group,
     p.address
 FROM users u
-LEFT JOIN patient_profiles p 
+LEFT JOIN patient_profiles p
 ON u.user_id = p.patient_id
 WHERE u.user_id = '$user_id'
 ";

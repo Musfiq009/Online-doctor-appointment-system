@@ -10,11 +10,11 @@
 <header class="navbar">
     <div class="logo">Consultation Time</div>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">All Doctors</a>
+        <a href="../html/logedinDashboard.php">Home</a>
+        <a href="../html/bookappointment.php">All Doctors</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <button>Profile</button>
+        <a href="../html/userprofile.php"><button>Profile</button></a>
     </nav>
 </header>
 
