@@ -33,5 +33,7 @@ while ($row = mysqli_fetch_assoc($result)) {
      Delete
    </a>
     </div>
+<script src="delete_DoctorCard.js"></script>
+
 </div>
 <?php } ?>
