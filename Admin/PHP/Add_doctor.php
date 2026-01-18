@@ -15,10 +15,6 @@ if (isset($_POST['add_doctor'])) {
 
     $errors = [];
 
-    // -----------------
-    // VALIDATIONS
-    // -----------------
-
     if (empty($full_name) || strlen($full_name) < 3) {
         $errors[] = "Full name must be at least 3 characters long.";
     }
@@ -31,7 +27,6 @@ if (isset($_POST['add_doctor'])) {
         $errors[] = "Phone number must contain 10 to 15 digits.";
     }
 
-    // Check uniqueness
     if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM doctors WHERE email='$email'")) > 0) {
         $errors[] = "Email already exists. Please use a different email.";
     }
@@ -39,7 +34,6 @@ if (isset($_POST['add_doctor'])) {
         $errors[] = "Phone number already exists. Please use a different number.";
     }
 
-    // Photo validation
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
         $photo = $_FILES['photo']['name'];
         $tmp = $_FILES['photo']['tmp_name'];
@@ -57,7 +51,6 @@ if (isset($_POST['add_doctor'])) {
         $errors[] = "Please upload a photo.";
     }
 
-    // Store old values in session
     $_SESSION['old_values'] = [
         'full_name' => $full_name,
         'degree' => $degree,
@@ -68,14 +61,13 @@ if (isset($_POST['add_doctor'])) {
         'category' => $category
     ];
 
-    // Insert into DB if no errors
     if (empty($errors)) {
         $sql = "INSERT INTO doctors 
                 (full_name, degree, email, address, phone, specialization, category, photo, status) 
                 VALUES ('$full_name','$degree','$email','$address','$phone','$specialization','$category','$photo','$status')";
 
         if (mysqli_query($conn, $sql)) {
-            unset($_SESSION['old_values']); // clear old values
+            unset($_SESSION['old_values']); 
             $_SESSION['success'] = "Doctor added successfully!";
             header("Location: ../Html/Doctors.php");
             exit();
@@ -84,7 +76,6 @@ if (isset($_POST['add_doctor'])) {
         }
     }
 
-    // Store errors in session
     if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
         header("Location: ../Html/Doctors.php");
