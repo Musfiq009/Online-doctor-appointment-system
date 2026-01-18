@@ -26,14 +26,14 @@
     </div>
 
     <div class="tab-buttons">
-        <button class="tab-btn" onclick="showTab('addDoctor')">Add Doctor</button>
+        <button class="tab-btn active" onclick="showTab('addDoctor')">Add Doctor</button>
         <button class="tab-btn" onclick="showTab('viewDoctors')">View All Doctors</button>
     </div>
 
-    <div id="addDoctor" class="tab-content">
+    <div id="addDoctor" class="tab-content" style="display:block;">
         <div class="form-section">
 
-            <form action="Add_doctor.php" method="POST" enctype="multipart/form-data">
+            <form action="../PHP/Add_doctor.php" method="POST" enctype="multipart/form-data">
 
                 <label>Full Name</label>
                 <input type="text" name="full_name" required>
@@ -80,8 +80,7 @@
     </div>
 
 </div>
-<script src="Doctor_Tab.js"></script>
-
+<script src="Doctor_tab.js"></script>
 
 </body>
 </html>
