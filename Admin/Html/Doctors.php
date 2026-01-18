@@ -102,6 +102,7 @@ session_start();
 
     <div id="viewDoctors" class="tab-content" style="display:none;">
         <div id="doctorCards">
+            <?php include "Get_Doctors.php"; ?>
         </div>
     </div>
 

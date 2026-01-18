@@ -134,5 +134,108 @@ textarea {
 .success-msg {
     color: #04b904cc;
 }
+#doctorCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*DOCTOR CARD*/
+
+.doctor-card {
+    background: #ffffff;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Doctor Image */
+.doctor-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Doctor Info */
+.doctor-card h3 {
+    font-size: 16px;
+    color: #1e293b;
+    margin: 12px 15px 5px;
+}
+
+.doctor-card p {
+    font-size: 13px;
+    color: #475569;
+    margin: 4px 15px;
+}
+
+/* Doctor Status Badge */
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Available */
+.status-available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Unavailable */
+.status-unavailable {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/*CARD BUTTONS*/
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 12px 15px 15px;
+}
+
+.card-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Edit Button */
+.btn-edit {
+    background: #2563eb;
+}
+
+.btn-edit:hover {
+    background: #1e40af;
+}
+
+/* Delete Button */
+.btn-delete {
+    background: #dc2626;
+}
+
+.btn-delete:hover {
+    background: #991b1b;
+}
+
 
 
