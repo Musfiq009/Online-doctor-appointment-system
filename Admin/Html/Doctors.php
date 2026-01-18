@@ -26,8 +26,8 @@
     </div>
 
     <div class="tab-buttons">
-        <button class="tab-btn ">Add Doctor</button>
-        <button class="tab-btn">View All Doctors</button>
+        <button class="tab-btn" onclick="showTab('addDoctor')">Add Doctor</button>
+        <button class="tab-btn" onclick="showTab('viewDoctors')">View All Doctors</button>
     </div>
 
     <div id="addDoctor" class="tab-content">
@@ -71,6 +71,11 @@
                 </button>
 
             </form>
+        </div>
+    </div>
+
+    <div id="viewDoctors" class="tab-content" style="display:none;">
+        <div id="doctorCards">
         </div>
     </div>
 
