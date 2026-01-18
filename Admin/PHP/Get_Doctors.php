@@ -21,7 +21,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     </p>
 
    <div class="card-buttons">
-    <a href="edit_doctor.php?id=<?php echo $row['doctor_id']; ?>" 
+    <a href="?>" 
        target="_blank" 
        class="btn-edit">
         Edit
