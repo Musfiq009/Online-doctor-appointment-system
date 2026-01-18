@@ -80,6 +80,8 @@
     </div>
 
 </div>
+<script src="Doctor_Tab.js"></script>
+
 
 </body>
 </html>
