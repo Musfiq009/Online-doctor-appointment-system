@@ -29,6 +29,14 @@
         <button class="tab-btn active" onclick="showTab('addDoctor')">Add Doctor</button>
         <button class="tab-btn" onclick="showTab('viewDoctors')">View All Doctors</button>
     </div>
+    <?php if(isset($_GET['error'])){ ?>
+    <div class="error-msg"><?= htmlspecialchars($_GET['error']) ?></div>
+    <?php } ?>
+
+    <?php if(isset($_GET['success'])){ ?>
+    <div class="success-msg">Doctor added successfully!</div>
+    <?php } ?>
+
 
     <div id="addDoctor" class="tab-content" style="display:block;">
         <div class="form-section">
