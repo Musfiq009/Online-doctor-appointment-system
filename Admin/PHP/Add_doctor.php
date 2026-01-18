@@ -14,22 +14,28 @@ if (isset($_POST['add_doctor'])) {
 
     $errors = [];
 
-    // Full name validation
     if (empty($full_name) || strlen($full_name) < 3) {
         $errors[] = "Full name must be at least 3 characters long.";
     }
 
-    // Email validation
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Invalid email format.";
     }
 
-    // Phone number validation
     if (!preg_match("/^[0-9]{10,15}$/", $phone)) {
         $errors[] = "Phone number must contain 10 to 15 digits.";
     }
 
-    // Photo validation
+    $email_check = mysqli_query($conn, "SELECT * FROM doctors WHERE email='$email'");
+    if (mysqli_num_rows($email_check) > 0) {
+        $errors[] = "Email already exists. Please use a different email.";
+    }
+
+    $phone_check = mysqli_query($conn, "SELECT * FROM doctors WHERE phone='$phone'");
+    if (mysqli_num_rows($phone_check) > 0) {
+        $errors[] = "Phone number already exists. Please use a different number.";
+    }
+
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
         $photo = $_FILES['photo']['name'];
         $tmp = $_FILES['photo']['tmp_name'];
