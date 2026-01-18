@@ -108,7 +108,7 @@ session_start();
 
 </div>
 
-<script src="Doctor_tab.js"></script>
+<script src="../JS/Doctor_tab.js"></script>
 
 </body>
 </html>
