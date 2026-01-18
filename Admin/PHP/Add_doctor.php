@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../DB/configDB.php";
 
 if (isset($_POST['add_doctor'])) {
@@ -14,6 +15,10 @@ if (isset($_POST['add_doctor'])) {
 
     $errors = [];
 
+    // -----------------
+    // VALIDATIONS
+    // -----------------
+
     if (empty($full_name) || strlen($full_name) < 3) {
         $errors[] = "Full name must be at least 3 characters long.";
     }
@@ -26,16 +31,15 @@ if (isset($_POST['add_doctor'])) {
         $errors[] = "Phone number must contain 10 to 15 digits.";
     }
 
-    $email_check = mysqli_query($conn, "SELECT * FROM doctors WHERE email='$email'");
-    if (mysqli_num_rows($email_check) > 0) {
+    // Check uniqueness
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM doctors WHERE email='$email'")) > 0) {
         $errors[] = "Email already exists. Please use a different email.";
     }
-
-    $phone_check = mysqli_query($conn, "SELECT * FROM doctors WHERE phone='$phone'");
-    if (mysqli_num_rows($phone_check) > 0) {
+    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM doctors WHERE phone='$phone'")) > 0) {
         $errors[] = "Phone number already exists. Please use a different number.";
     }
 
+    // Photo validation
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
         $photo = $_FILES['photo']['name'];
         $tmp = $_FILES['photo']['tmp_name'];
@@ -53,23 +57,37 @@ if (isset($_POST['add_doctor'])) {
         $errors[] = "Please upload a photo.";
     }
 
-    if (empty($errors)) {
+    // Store old values in session
+    $_SESSION['old_values'] = [
+        'full_name' => $full_name,
+        'degree' => $degree,
+        'email' => $email,
+        'address' => $address,
+        'phone' => $phone,
+        'specialization' => $specialization,
+        'category' => $category
+    ];
 
+    // Insert into DB if no errors
+    if (empty($errors)) {
         $sql = "INSERT INTO doctors 
                 (full_name, degree, email, address, phone, specialization, category, photo, status) 
                 VALUES ('$full_name','$degree','$email','$address','$phone','$specialization','$category','$photo','$status')";
 
         if (mysqli_query($conn, $sql)) {
-            header("Location: ../Html/Doctors.php?success=1");
+            unset($_SESSION['old_values']); // clear old values
+            $_SESSION['success'] = "Doctor added successfully!";
+            header("Location: ../Html/Doctors.php");
             exit();
         } else {
             $errors[] = "Database error: " . mysqli_error($conn);
         }
     }
 
+    // Store errors in session
     if (!empty($errors)) {
-        $error_str = urlencode(implode(", ", $errors));
-        header("Location: ../Html/Doctors.php?error=$error_str");
+        $_SESSION['errors'] = $errors;
+        header("Location: ../Html/Doctors.php");
         exit();
     }
 }
