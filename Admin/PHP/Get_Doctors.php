@@ -28,10 +28,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     </a>
 
     <a href="#" 
-        class="btn-delete"
-        onclick="deleteDoctor(<?php echo $row['doctor_id']; ?>)">
-        Delete
-    </a>
+     class="btn-delete"
+     onclick="deleteDoctor(<?php echo $row['doctor_id']; ?>)">
+     Delete
+   </a>
     </div>
 </div>
 <?php } ?>
