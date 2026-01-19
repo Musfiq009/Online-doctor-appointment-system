@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"content="width=device-width,initial-scale=1.0">
     <title>Patient Registration</title>
-    <link rel="stylesheet"href="../css/registration.css">
+    <link rel="stylesheet"href="../Css/registration.css">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     }
     ?>
 
-    <form method="post" action="../php/register.php" enctype="multipart/form-data">
+    <form method="post" action="../PHP/register.php" enctype="multipart/form-data">
         
         <div class="input">
             <label>First Name</label>
@@ -55,7 +55,7 @@
         <button type="submit" class="register-btn">Register</button>
     </form>
 
-    <p>Already registered? <a href="login.php">Login here</a></p>
+    <p>Are You Already registered? <a href="login.php">Login here</a></p>
 </div>
 
 </body>

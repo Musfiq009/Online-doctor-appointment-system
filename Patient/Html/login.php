@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Patient Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../Css/login.css">
 </head>
 <body>
 
 <div class="login-container">
     <h2>Patient Login</h2>
-    <p class="subtitle">Access your appointments & reports</p>
+    <p class="subtitle">Access your appointments </p>
 
     <?php
     if (isset($_GET['error'])) {
@@ -24,7 +24,7 @@
     }
     ?>
 
-    <form method="post" action="../php/login.php">
+    <form method="post" action="../PHP/login.php">
 
         <div class="input">
             <label>Phone Number</label>
@@ -42,7 +42,7 @@
             <p>Not registered yet?
                 <a href="register.php">Register</a>
             </p>
-            <a href="#" class="forgot">Forgot Password?</a>
+            <a href="../Html/forgotpassword.php" class="forgot">Forgot Password?</a>
         </div>
 
     </form>

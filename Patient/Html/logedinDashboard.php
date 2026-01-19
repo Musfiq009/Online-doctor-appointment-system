@@ -1,12 +1,12 @@
 <?php
-include "../db/configDB.php";
+include "../DB/configDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prescripto | Doctor Appointment</title>
-    <link rel="stylesheet" href="../css/logedinDashboard.css">
+    <title>Consultation time | Doctor Appointment</title>
+    <link rel="stylesheet" href="../Css/logedinDashboard.css">
 </head>
 <body>
 
@@ -14,18 +14,18 @@ include "../db/configDB.php";
     <div class="logo">consultation time</div>
     <nav>
         <a href="">Home</a>
-        <a href="../html/bookappointment.php">All Doctors</a>
+        <a href="../Html/bookappointment.php">All Doctors</a>
         <a href="">About</a>
         <a href="">Contact</a>
-        <a href="../html/userprofile.php"><button class="nav-btn">Profile</button></a>
+        <a href="../Html/userprofile.php"><button class="nav-btn">Profile</button></a>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-text">
         <h1>Book Appointment<br>With Trusted Doctors</h1>
-        <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free.</p>
-        <button>Book appointment</button>
+        <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hasslefree.</p>
+        <a href="../Html/bookappointment.php"><button>Book appointment</button></a>
     </div>
 </section>
 <section class="speciality">
@@ -33,12 +33,12 @@ include "../db/configDB.php";
     <p>Simply browse through our extensive list of trusted doctors.</p>
 
     <div class="speciality-grid">
-        <button class="speciality">General physician</button>
-        <button class="speciality">Gynecologist</button>
-        <button class="speciality">Dermatologist</button>
-        <button class="speciality">Pediatricians</button>
-        <button class="speciality">Neurologist</button>
-        <button class="speciality">Gastroenterologist</button>
+        <a href="../Html/bookappointment.php"><button class="speciality">General physician</button></a>
+        <a href="../Html/bookappointment.php"><button class="speciality">Gynecologist</button></a>
+        <a href="../Html/bookappointment.php"><button class="speciality">Dermatologist</button></a>
+        <a href="../Html/bookappointment.php"><button class="speciality">Pediatricians</button></a>
+        <a href="../Html/bookappointment.php"><button class="speciality">Neurologist</button></a>
+        <a href="../Html/bookappointment.php"><button class="speciality">Gastroenterologist</button></a>
     </div>
 </section>
 
@@ -76,7 +76,7 @@ include "../db/configDB.php";
 <section class="cta">
     <div class="cta-text">
         <h2>Book Appointment<br>With 100+ Trusted Doctors</h2>
-        <button>Create account</button>
+        <a href="../Html/registration.php"><button>Create account</button></a>
     </div>
 </section>
 
