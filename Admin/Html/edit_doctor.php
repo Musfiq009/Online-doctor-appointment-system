@@ -68,3 +68,8 @@ include "Fetch_doctor.php";
 
             </form>
     </div>
+    <div class="doctor-preview">
+        <h3>Photo</h3>
+        <img src="../Images/<?= $doctor['photo']; ?>" alt="Doctor Photo">
+    </div>
+</div>
