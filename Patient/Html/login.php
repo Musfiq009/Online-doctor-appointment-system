@@ -42,7 +42,7 @@
             <p>Not registered yet?
                 <a href="register.php">Register</a>
             </p>
-            <a href="#" class="forgot">Forgot Password?</a>
+            <a href="../Html/forgotpassword.php" class="forgot">Forgot Password?</a>
         </div>
 
     </form>
