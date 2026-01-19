@@ -12,7 +12,7 @@ body {
 .sidebar {
     width: 240px;
     height: 100vh;
-    background: #1e293b;
+    background-color: #1e293b;
     position: fixed;
     padding: 20px;
     color: #fff;
@@ -28,16 +28,15 @@ body {
 }
 
 .sidebar ul li a {
-    display: block;
-    padding: 10px;
-    color: #cbd5e1;
     text-decoration: none;
+    color: #cbd5e1;
+    padding: 10px;
+    display: block;
     border-radius: 6px;
 }
 
-.sidebar ul li a:hover,
-.sidebar ul li a.active {
-    background: #334155;
+.sidebar ul li a:hover {
+    background-color: #334155;
     color: #fff;
 }
 
