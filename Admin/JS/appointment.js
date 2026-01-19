@@ -53,5 +53,24 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         };
         xhttp.send();
+
+        window.completeAppointment = function(id){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","update_appointment_status.php?action=complete&id="+id,true);
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState===4 && xhttp.status===200){
+                console.log("Complete Response:", xhttp.responseText);
+                refreshCurrentTab();
+            }
+        };
+        xhttp.send();
+    };
+
+    var firstTab = document.querySelector(".tab-btn.active");
+    if(firstTab){
+        var status = firstTab.textContent.trim();
+        loadAppointments(status, firstTab);
+    }
+
     };
 });
