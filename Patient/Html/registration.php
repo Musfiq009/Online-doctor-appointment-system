@@ -55,7 +55,7 @@
         <button type="submit" class="register-btn">Register</button>
     </form>
 
-    <p>Already registered? <a href="login.php">Login here</a></p>
+    <p>Are You Already registered? <a href="login.php">Login here</a></p>
 </div>
 
 </body>
