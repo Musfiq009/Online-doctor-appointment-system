@@ -40,7 +40,7 @@
 
         <div class="links">
             <p>Not registered yet?
-                <a href="register.php">Register</a>
+                <a href="../Html/registration.php">Register</a>
             </p>
             <a href="../Html/forgotpassword.php" class="forgot">Forgot Password?</a>
         </div>

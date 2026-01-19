@@ -73,12 +73,5 @@ include "../DB/configDB.php";
     </div>
 </section>
 
-<section class="cta">
-    <div class="cta-text">
-        <h2>Book Appointment<br>With 100+ Trusted Doctors</h2>
-        <a href="../Html/registration.php"><button>Create account</button></a>
-    </div>
-</section>
-
 </body>
 </html>
