@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Prescripto | Doctor Appointment</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../Css/dashboard.css">
 </head>
 <body>
 
