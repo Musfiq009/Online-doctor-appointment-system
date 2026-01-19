@@ -26,10 +26,10 @@
     </div>
 
     <div class="tab-buttons">
-        <button class="tab-btn active">Pending</button>
-        <button class="tab-btn">Accepted</button>
-        <button class="tab-btn">Completed</button>
-        <button class="tab-btn">Canceled</button>
+        <button class="tab-btn active" onclick="loadAppointments('Pending', this)">Pending</button>
+        <button class="tab-btn" onclick="loadAppointments('Accepted', this)">Accepted</button>
+        <button class="tab-btn" onclick="loadAppointments('Completed', this)">Completed</button>
+        <button class="tab-btn" onclick="loadAppointments('Canceled', this)">Canceled</button>
     </div>
     <div class="form-section">
         <table>
