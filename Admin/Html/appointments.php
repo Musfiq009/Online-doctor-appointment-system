@@ -14,7 +14,7 @@
         <li><a href="../Html/Dashboard.php">Dashboard</a></li>
         <li><a href="../Html/Doctors.php">Doctors</a></li>
         <li><a href="../Html/appointments.php" class="active">Appointments</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="../PHP/Logout.php">Logout</a></li>
     </ul>
 </div>
 

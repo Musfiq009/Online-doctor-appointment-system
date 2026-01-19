@@ -24,14 +24,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $user = mysqli_fetch_assoc($result);
 
-        if (password_verify($password, $user['password'])) {
+        $login_ok = false;
 
-            $_SESSION['user_id']   = $user['user_id'];
-            $_SESSION['user_name'] = $user['full_name'];
+        if ($user['role'] === 'admin') {
+            if ($password === $user['password']) {
+                $login_ok = true;
+            }
+        } else {
+            if (password_verify($password, $user['password'])) {
+                $login_ok = true;
+            }
+        }
+
+        if ($login_ok) {
+
+            $_SESSION['user_id']    = $user['user_id'];
+            $_SESSION['user_name']  = $user['full_name'];
             $_SESSION['user_phone'] = $user['phone'];
-            $_SESSION['role'] = $user['role'];
+            $_SESSION['role']       = $user['role'];
 
-            header("Location: ../Html/logedinDashboard.php");
+            if ($user['role'] === 'admin') {
+                header("Location: ../../Admin/Html/Dashboard.php");
+            } else {
+                header("Location: ../Html/logedinDashboard.php");
+            }
             exit();
 
         } else {
