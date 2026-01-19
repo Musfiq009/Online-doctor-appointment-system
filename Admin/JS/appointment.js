@@ -17,4 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         xhr.send();
     };
+
+    window.refreshCurrentTab = function() {
+        var activeBtn = document.querySelector(".tab-btn.active");
+        if(activeBtn){
+            var status = activeBtn.textContent.trim();
+            loadAppointments(status, activeBtn);
+        }
+    };
 });
