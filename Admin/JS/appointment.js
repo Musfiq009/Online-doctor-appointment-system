@@ -43,4 +43,15 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         xhttp.send();
     };
+    window.rejectAppointment = function(id){
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","update_appointment_status.php?action=reject&id="+id,true);
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState===4 && xhttp.status===200){
+                console.log("Reject Response:", xhttp.responseText);
+                refreshCurrentTab();
+            }
+        };
+        xhttp.send();
+    };
 });
