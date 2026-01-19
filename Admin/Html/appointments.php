@@ -53,5 +53,8 @@
     </div>
 
 </div>
+<script src="../JS/appointment.js"></script>
+<script src="../JS/load_appointments.js"></script>
+
 </body>
 </html>
