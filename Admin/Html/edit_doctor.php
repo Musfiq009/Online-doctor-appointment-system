@@ -79,7 +79,7 @@ include "../PHP/Fetch_doctor.php";
 
     <?php
         $doctor_id = $doctor['doctor_id'];
-        include "get_doctor_appointments.php";
+        include "../PHP/get_doctor_appointment.php";
     ?>
 
     <table class="appointment-table">
@@ -114,7 +114,7 @@ include "../PHP/Fetch_doctor.php";
 
         <?php
             $doctor_id = $doctor['doctor_id'];
-            include "get_doctor_ratings.php";
+            include "../PHP/get_doctor_ratings.php";
         ?>
 
         <h4>
