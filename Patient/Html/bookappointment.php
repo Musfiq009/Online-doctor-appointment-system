@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Appointment</title>
-    <link rel="stylesheet" href="../css/bookappointment.css">
+    <link rel="stylesheet" href="../Css/bookappointment.css">
 </head>
 <body>
 

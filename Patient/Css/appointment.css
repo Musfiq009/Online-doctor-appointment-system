@@ -81,7 +81,7 @@ form button:hover{
     background:#023e8a;
 }
 
-@media (max-width:600px){
+/* @media (max-width:600px){
     body{
         padding:15px;
     }
@@ -89,4 +89,4 @@ form button:hover{
     .doctor-box, form{
         padding:20px;
     }
-}
+} */
