@@ -4,18 +4,18 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
         if(btn) btn.classList.add("active");
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "get_appointments.php?status=" + status, true);
-        xhr.onreadystatechange = function() {
-            if(xhr.readyState === 4){
-                if(xhr.status === 200){
-                    document.getElementById("appointmentData").innerHTML = xhr.responseText;
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "get_appointments.php?status=" + status, true);
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState === 4){
+                if(xhttp.status === 200){
+                    document.getElementById("appointmentData").innerHTML = xhttp.responseText;
                 } else {
-                    console.error("Failed to load appointments", xhr.status, xhr.responseText);
+                    console.error("Failed to load appointments", xhttp.status, xhttp.responseText);
                 }
             }
         };
-        xhr.send();
+        xhttp.send();
     };
 
     window.refreshCurrentTab = function() {
@@ -24,5 +24,23 @@ document.addEventListener("DOMContentLoaded", function() {
             var status = activeBtn.textContent.trim();
             loadAppointments(status, activeBtn);
         }
+    };
+    window.acceptAppointment = function(id, type) {
+        var time = '';
+        if(type === 'Online'){
+            time = prompt("Enter online consultation time (HH:MM):");
+            if(!time) return;
+            time += ":00"; 
+        }
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET","update_appointment_status.php?action=accept&id="+id+"&time="+encodeURIComponent(time),true);
+        xhttp.onreadystatechange = function(){
+            if(xhttp.readyState===4 && xhttp.status===200){
+                console.log("Accept Response:", xhttp.responseText);
+                refreshCurrentTab();
+            }
+        };
+        xhttp.send();
     };
 });
