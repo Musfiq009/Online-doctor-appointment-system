@@ -11,9 +11,9 @@
 <div class="sidebar">
     <h2>Admin Panel</h2>
     <ul>
-        <li><a href="Dashboard.php">Dashboard</a></li>
-        <li><a href="Doctors.php">Doctors</a></li>
-        <li><a href="#" class="active">Appointments</a></li>
+        <li><a href="../Html/Dashboard.php">Dashboard</a></li>
+        <li><a href="../Html/Doctors.php">Doctors</a></li>
+        <li><a href="../Html/appointments.php" class="active">Appointments</a></li>
         <li><a href="#">Logout</a></li>
     </ul>
 </div>

@@ -17,7 +17,7 @@ session_start();
     <ul>
         <li><a href="../Html/Dashboard.php">Dashboard</a></li>
         <li><a href="../Html/Doctors.php" class="active">Doctors</a></li>
-        <li><a href="#">Appointments</a></li>
+        <li><a href="../Html/appointments.php">Appointments</a></li>
         <li><a href="#">Logout</a></li>
     </ul>
 </div>

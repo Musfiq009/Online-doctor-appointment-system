@@ -19,7 +19,7 @@ include "../PHP/Payment_stats.php";
     <ul>
         <li><a class="active" href="../Html/Dashboard.php">Dashboard</a></li>
         <li><a href="../Html/Doctors.php">Doctors</a></li>
-        <li><a href="#">Appointments</a></li>
+        <li><a href="../Html/appointments.php">Appointments</a></li>
         <li><a href="#">Logout</a></li>
     </ul>
 </div>
