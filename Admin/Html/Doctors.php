@@ -15,8 +15,8 @@ session_start();
 <div class="sidebar">
     <h2>Admin Panel</h2>
     <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#" class="active">Doctors</a></li>
+        <li><a href="../Html/Dashboard.php">Dashboard</a></li>
+        <li><a href="../Html/Doctors.php" class="active">Doctors</a></li>
         <li><a href="#">Appointments</a></li>
         <li><a href="#">Logout</a></li>
     </ul>
