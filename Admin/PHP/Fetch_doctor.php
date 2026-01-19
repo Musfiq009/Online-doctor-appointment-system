@@ -1,5 +1,5 @@
 <?php
-include "configDB.php";
+include "../DB/configDB.php";
 
 if (!isset($_GET['id'])) {
     die("Doctor ID not provided");

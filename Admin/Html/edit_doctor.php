@@ -1,5 +1,5 @@
 <?php
-include "Fetch_doctor.php";
+include "../PHP/Fetch_doctor.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,7 @@ include "Fetch_doctor.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Doctor</title>
-    <link rel="stylesheet" href="edit_Doctors.css">
+    <link rel="stylesheet" href="../Css/Edit_Doctor.css">
 </head>
 <body>
 
