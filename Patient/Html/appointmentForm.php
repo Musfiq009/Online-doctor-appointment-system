@@ -1,11 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_id'])){
-    header("Location: ../html/login.php");
+    header("Location: ../Html/login.php");
     exit();
 }
 
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 $doctor_id = $_GET['doctor_id']; 
 $patient_id = $_SESSION['user_id'];
@@ -30,7 +30,7 @@ $doctor = mysqli_fetch_assoc($result);
     <p><?php echo $doctor['specialization']; ?> | <?php echo $doctor['category']; ?></p>
 </div>
 
-<form method="POST" action="../php/saveAppointment.php">
+<form method="POST" action="../PHP/saveAppointment.php">
     <h2>Book Appointment</h2>
 
     <input type="hidden" name="doctor_id" value="<?php echo $doctor_id; ?>">
