@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments</title>
-    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="../Css/appointment.css">
 </head>
 <body>
 
@@ -26,10 +26,10 @@
     </div>
 
     <div class="tab-buttons">
-        <button class="">Pending</button>
-        <button class="">Accepted</button>
-        <button class="">Completed</button>
-        <button class="">Canceled</button>
+        <button class="tab-btn active">Pending</button>
+        <button class="tab-btn">Accepted</button>
+        <button class="tab-btn">Completed</button>
+        <button class="tab-btn">Canceled</button>
     </div>
     <div class="form-section">
         <table>
