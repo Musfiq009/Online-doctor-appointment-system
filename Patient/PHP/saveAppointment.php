@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if($result){
         $_SESSION['msg'] = "Appointment request sent successfully!";
-        header("Location: ../html/logedinDashboard.php");
+        header("Location: ../html/appointmentSuccess.php");
     } else {
         $_SESSION['msg'] = "Failed to send request!";
         header("Location: ../html/appointmentForm.php?doctor_id=$doctor_id");
