@@ -18,7 +18,7 @@ include "../PHP/Payment_stats.php";
     <h2>Admin Panel</h2>
     <ul>
         <li><a class="active" href="../Html/Dashboard.php">Dashboard</a></li>
-        <li><a href="#">Doctors</a></li>
+        <li><a href="../Html/Doctors.php">Doctors</a></li>
         <li><a href="#">Appointments</a></li>
         <li><a href="#">Logout</a></li>
     </ul>
