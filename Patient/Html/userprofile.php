@@ -1,4 +1,6 @@
-<?php include "../PHP/userprofile.php"; ?>
+<?php 
+include "../PHP/userprofile.php"; 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -56,7 +58,7 @@
         <label>Address</label>
         <textarea name="address"><?= $user['address']; ?></textarea>
 
-        <button type="submit">Save Changes</button>
+        <button type="submit">Save Change</button>
     </form>
 
 </div>
