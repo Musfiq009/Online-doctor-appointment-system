@@ -11,10 +11,10 @@
 
     <?php
     if (isset($_GET['error'])) {
-        echo "<p class='error'>Phone number not found</p>";
+        echo "<p class='error'>Phone number is not found</p>";
     }
     if (isset($_GET['success'])) {
-        echo "<p class='success'>Password updated successfully</p>";
+        echo "<p class='success'>your Password updated successfully</p>";
     }
     ?>
 
