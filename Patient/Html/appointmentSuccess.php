@@ -7,9 +7,9 @@
 <body>
 
 <div class="success-box">
-    <h2>Appointment Requested</h2>
-    <p>Your appointment is pending approval.</p>
-    <a href="logedinDashboard.php">Back to Dashboard</a>
+    <h2>Appointment Request Successful</h2>
+    <p>Your appointment is pending for approval.</p>
+    <a href="logedinDashboard.php">Back To Dashboard</a>
 </div>
 
 </body>
