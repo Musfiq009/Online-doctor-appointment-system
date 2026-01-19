@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #1e293b;
+    position: fixed;
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background: #334155;
+    color: #fff;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+.header {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-section {
+    background: #ffffff;
+    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.tab-buttons button {
+    padding: 10px 22px;
+    border: none;
+    background: #e2e8f0;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-buttons button:hover {
+    background: #cbd5e1;
+}
+
+.tab-buttons button.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: #f1f5f9;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+button.action-btn {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+button.accept {
+    background: #16a34a;
+    color: #fff;
+}
+
+button.accept:hover {
+    background: #15803d;
+}
+
+button.reject {
+    background: #dc2626;
+    color: #fff;
+}
+
+button.reject:hover {
+    background: #b91c1c;
+}
+
+button.complete {
+    background: #2563eb;
+    color: #fff;
+}
+
+button.complete:hover {
+    background: #1e40af;
+}
