@@ -24,7 +24,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <a href="../Html/edit_doctor.php?id=<?php echo $row['doctor_id'];?>" 
        target="_blank" 
        class="btn-edit">
-        Edit
+        View
     </a>
 
     <a href="#" 

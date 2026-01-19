@@ -28,7 +28,7 @@ include "../PHP/Payment_stats.php";
 
     <div class="header">
         <h1>Admin Dashboard</h1>
-        <p>Online Doctor Appointment & Diagnostic Management System</p>
+        <p>Online Doctor Appointment Management System</p>
     </div>
 
     <div class="card-container">
