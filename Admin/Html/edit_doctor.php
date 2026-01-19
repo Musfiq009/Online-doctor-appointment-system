@@ -108,3 +108,46 @@ include "Fetch_doctor.php";
         <?php } ?>
         </tbody>
     </table>
+    <div class="form-section">
+
+        <h2>Doctor Ratings & Reviews</h2>
+
+        <?php
+            $doctor_id = $doctor['doctor_id'];
+            include "get_doctor_ratings.php";
+        ?>
+
+        <h4>
+            Overall Rating:
+            <?php
+            if ($avg_data['total_reviews'] > 0) {
+                echo $avg_data['avg_rating'] . " / 5 ";
+                echo "(" . $avg_data['total_reviews'] . " reviews)";
+            } else {
+                echo "No ratings yet";
+            }
+            ?>
+        </h4>
+
+        <hr>
+
+        <?php if (mysqli_num_rows($reviews) > 0) { ?>
+            <?php while ($r = mysqli_fetch_assoc($reviews)) { ?>
+                <div class="review">
+                    <strong><?= $r['patient_name']; ?></strong>
+                    <span class="rating"><?= $r['rating']; ?>/5</span>
+                    <p><?= nl2br($r['comment']); ?></p>
+                    <small><?= date("d M Y", strtotime($r['created_at'])); ?></small>
+                </div>
+                <hr>
+            <?php } ?>
+        <?php } else { ?>
+            <p>No patient reviews available.</p>
+        <?php } ?>
+
+    </div>
+
+</div>
+
+</body>
+</html>
