@@ -1,5 +1,5 @@
 <?php
-include "configDB.php";
+include "../DB/configDB.php";
 
 if (isset($_POST['update_doctor'])) {
 
@@ -17,7 +17,7 @@ if (isset($_POST['update_doctor'])) {
 
         $photo = time() . "_" . $_FILES['photo']['name'];
         $tmp = $_FILES['photo']['tmp_name'];
-        move_uploaded_file($tmp, "../uploads/" . $photo);
+        move_uploaded_file($tmp, "../Images/" . $photo);
 
         $sql = "UPDATE doctors SET
             full_name='$full_name',
@@ -46,7 +46,7 @@ if (isset($_POST['update_doctor'])) {
     }
 
     if (mysqli_query($conn, $sql)) {
-        header("Location: edit_doctor.php?id=$id&success=1");
+        header("Location: ../Html/edit_doctor.php?id=$id&success=1");
     } else {
         echo "Update failed!";
     }
