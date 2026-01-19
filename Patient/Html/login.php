@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Patient Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../Css/login.css">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
     }
     ?>
 
-    <form method="post" action="../php/login.php">
+    <form method="post" action="../PHP/login.php">
 
         <div class="input">
             <label>Phone Number</label>

@@ -1,9 +1,9 @@
 <?php
 session_start();
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../html/login.php");
+    header("Location: ../Html/login.php");
     exit();
 }
 

@@ -1,9 +1,9 @@
 <?php
 session_start();
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 if(!isset($_SESSION['user_id'])){
-    header("Location: ../html/login.php");
+    header("Location: ../Html/login.php");
     exit();
 }
 
@@ -29,10 +29,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if($result){
         $_SESSION['msg'] = "Appointment request sent successfully!";
-        header("Location: ../html/appointmentSuccess.php");
+        header("Location: ../Html/appointmentSuccess.php");
     } else {
         $_SESSION['msg'] = "Failed to send request!";
-        header("Location: ../html/appointmentForm.php?doctor_id=$doctor_id");
+        header("Location: ../Html/appointmentForm.php?doctor_id=$doctor_id");
     }
 }
 ?>

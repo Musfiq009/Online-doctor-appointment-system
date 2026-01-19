@@ -1,5 +1,5 @@
 <?php
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 $successMsg = $errorMsg = "";
 
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $checkPhone);
 
         if(mysqli_num_rows($result) > 0) {
-            header("Location: ../html/registration.php?error=phone_exists");
+            header("Location: ../Html/registration.php?error=phone_exists");
             exit();
         } else {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          VALUES ('$patient_id', NULL, NULL, NULL, NULL)";
 
                 if(mysqli_query($conn, $sql2)) {
-                    header("Location:../html/login.php?success=registered");
+                    header("Location:../Html/login.php?success=registered");
                     exit();
                 } else {
                     $errorMsg = "Profile creation failed!";

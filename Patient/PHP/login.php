@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -8,12 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     if (empty($phone) || empty($password)) {
-        header("Location: ../html/login.php?error=empty");
+        header("Location: ../Html/login.php?error=empty");
         exit();
     }
 
     if (!preg_match("/^[0-9]{11}$/", $phone)) {
-        header("Location: ../html/login.php?error=phone");
+        header("Location: ../Html/login.php?error=phone");
         exit();
     }
 
@@ -31,16 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_phone'] = $user['phone'];
             $_SESSION['role'] = $user['role'];
 
-            header("Location: ../html/logedinDashboard.php");
+            header("Location: ../Html/logedinDashboard.php");
             exit();
 
         } else {
-            header("Location: ../html/login.php?error=wrongpass");
+            header("Location: ../Html/login.php?error=wrongpass");
             exit();
         }
 
     } else {
-        header("Location: ../html/login.php?error=notfound");
+        header("Location: ../Html/login.php?error=notfound");
         exit();
     }
 }

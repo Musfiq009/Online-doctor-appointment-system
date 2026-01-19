@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>User Profile</title>
-    <link rel="stylesheet" href="../css/userprofile.css">
+    <link rel="stylesheet" href="../Css/userprofile.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <nav>
         <a href="logedinDashboard.php">Dashboard</a>
         <a href="bookappointment.php">Appointments</a>
-        <a href="../php/logout.php">Logout</a>
+        <a href="../PHP/logout.php">Logout</a>
     </nav>
 </header>
 
@@ -24,7 +24,7 @@
         <p><?= ucfirst($user['role']); ?></p>
     </div>
 
-    <form class="profile-details" method="POST" action="../php/update_profile.php">
+    <form class="profile-details" method="POST" action="../PHP/update_profile.php">
         <?php if (isset($_SESSION['success_msg'])) { ?>
         <div class="success-msg">
             <p class="s-msg"><?= $_SESSION['success_msg']; ?></p>

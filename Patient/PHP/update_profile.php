@@ -1,9 +1,9 @@
 <?php
 session_start();
-include "../db/configDB.php";
+include "../DB/configDB.php";
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../html/login.php");
+    header("Location: ../Html/login.php");
     exit();
 }
 
@@ -16,7 +16,6 @@ $age         = $_POST['age'];
 $blood_group = $_POST['blood_group'];
 $address     = $_POST['address'];
 
-/* Update users table */
 mysqli_query($conn, "
 UPDATE users SET
 full_name = '$full_name',
@@ -24,7 +23,6 @@ phone = '$phone'
 WHERE user_id = '$user_id'
 ");
 
-/* Check if profile exists */
 $check = mysqli_query($conn, "SELECT * FROM patient_profiles WHERE patient_id='$user_id'");
 
 if (mysqli_num_rows($check) > 0) {
@@ -49,5 +47,5 @@ if (mysqli_num_rows($check) > 0) {
 }
 
 $_SESSION['success_msg'] = "Information saved successfully";
-header("Location: ../html/userprofile.php");
+header("Location: ../Html/userprofile.php");
 exit();
