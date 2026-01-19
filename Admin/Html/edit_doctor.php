@@ -73,3 +73,38 @@ include "Fetch_doctor.php";
         <img src="../Images/<?= $doctor['photo']; ?>" alt="Doctor Photo">
     </div>
 </div>
+<div class="header">
+        <h2>Appointment History</h2>
+    </div>
+
+    <?php
+        $doctor_id = $doctor['doctor_id'];
+        include "get_doctor_appointments.php";
+    ?>
+
+    <table class="appointment-table">
+        <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php if (mysqli_num_rows($appointmentResult) > 0) { ?>
+            <?php while ($row = mysqli_fetch_assoc($appointmentResult)) { ?>
+                <tr>
+                    <td><?= $row['patient_name']; ?></td>
+                    <td><?= $row['appointment_date']; ?></td>
+                    <td><?= $row['appointment_time'] ?? '-'; ?></td>
+                    <td><?= $row['consultation_type']; ?></td>
+                </tr>
+            <?php } ?>
+        <?php } else { ?>
+            <tr>
+                <td colspan="4">No appointments found</td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>

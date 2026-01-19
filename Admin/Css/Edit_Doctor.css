@@ -100,3 +100,21 @@ textarea {
     font-size: 13px;
     margin-top: 10px;
 }
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.appointment-table th {
+    background: #f1f5f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.appointment-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #475569;
+}
