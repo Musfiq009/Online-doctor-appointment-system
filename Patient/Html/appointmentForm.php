@@ -20,7 +20,7 @@ $doctor = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <title>Book Appointment</title>
-    <link rel="stylesheet" href="../css/appointment.css">
+    <link rel="stylesheet" href="../Css/appointment.css">
 </head>
 <body>
 
