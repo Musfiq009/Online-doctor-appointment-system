@@ -25,7 +25,7 @@ include "../db/configDB.php";
     <div class="hero-text">
         <h1>Book Appointment<br>With Trusted Doctors</h1>
         <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free.</p>
-        <button>Book appointment</button>
+        <a href="../html/bookappointment.php"><button>Book appointment</button></a>
     </div>
 </section>
 <section class="speciality">
