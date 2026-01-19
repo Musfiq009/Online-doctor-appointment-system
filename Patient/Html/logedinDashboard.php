@@ -33,12 +33,12 @@ include "../db/configDB.php";
     <p>Simply browse through our extensive list of trusted doctors.</p>
 
     <div class="speciality-grid">
-        <button class="speciality">General physician</button>
-        <button class="speciality">Gynecologist</button>
-        <button class="speciality">Dermatologist</button>
-        <button class="speciality">Pediatricians</button>
-        <button class="speciality">Neurologist</button>
-        <button class="speciality">Gastroenterologist</button>
+        <a href="../html/bookappointment.php"><button class="speciality">General physician</button></a>
+        <a href="../html/bookappointment.php"><button class="speciality">Gynecologist</button></a>
+        <a href="../html/bookappointment.php"><button class="speciality">Dermatologist</button></a>
+        <a href="../html/bookappointment.php"><button class="speciality">Pediatricians</button></a>
+        <a href="../html/bookappointment.php"><button class="speciality">Neurologist</button></a>
+        <a href="../html/bookappointment.php"><button class="speciality">Gastroenterologist</button></a>
     </div>
 </section>
 
