@@ -9,7 +9,7 @@
 
 <div class="login-container">
     <h2>Patient Login</h2>
-    <p class="subtitle">Access your appointments & reports</p>
+    <p class="subtitle">Access your appointments </p>
 
     <?php
     if (isset($_GET['error'])) {
