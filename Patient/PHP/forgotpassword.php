@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Forgot Password</title>
-    <link rel="stylesheet" href="../Css/forgot_password.css">
+    <link rel="stylesheet" href="../Css/forgotpassword.css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
     }
     ?>
 
-    <form method="POST" action="../PHP/forgot_password.php">
+    <form method="POST" action="../PHP/forgotpassword.php">
 
         <label>Phone Number</label>
         <input type="text" name="phone" placeholder="01XXXXXXXXX">
