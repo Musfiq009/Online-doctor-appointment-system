@@ -5,7 +5,7 @@ include "../DB/configDB.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prescripto | Doctor Appointment</title>
+    <title>Consultation time | Doctor Appointment</title>
     <link rel="stylesheet" href="../Css/logedinDashboard.css">
 </head>
 <body>
@@ -24,7 +24,7 @@ include "../DB/configDB.php";
 <section class="hero">
     <div class="hero-text">
         <h1>Book Appointment<br>With Trusted Doctors</h1>
-        <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free.</p>
+        <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hasslefree.</p>
         <a href="../Html/bookappointment.php"><button>Book appointment</button></a>
     </div>
 </section>
