@@ -9,10 +9,11 @@ $id = (int)$_GET['id'];
 $action = $_GET['action'];
 
 if ($action === 'accept') {
+
     $infoSql = "
-    SELECT doctor_id, appointment_date, consultation_type
-    FROM appointments
-    WHERE appointment_id = $id
+        SELECT doctor_id, appointment_date, consultation_type
+        FROM appointments
+        WHERE appointment_id = $id
     ";
     $infoResult = mysqli_query($conn, $infoSql);
     $appointment = mysqli_fetch_assoc($infoResult);
@@ -20,15 +21,6 @@ if ($action === 'accept') {
     if (!$appointment) {
         die("Appointment not found");
     }
-
-
-
-    if (!mysqli_query($conn, $sql)) {
-        die("SQL Error: " . mysqli_error($conn));
-    }
-
-    echo "Accepted successfully";
-}
 
     $doctorId = $appointment['doctor_id'];
     $date = $appointment['appointment_date'];
@@ -51,9 +43,9 @@ if ($action === 'accept') {
             SELECT MAX(serial_number) AS last_serial
             FROM appointments
             WHERE doctor_id = $doctorId
-            AND appointment_date = '$date'
-            AND consultation_type = 'Onsite'
-            AND status IN ('Accepted','Completed')
+              AND appointment_date = '$date'
+              AND consultation_type = 'Onsite'
+              AND status IN ('Accepted','Completed')
         ";
 
         $serialResult = mysqli_query($conn, $serialSql);
@@ -67,3 +59,36 @@ if ($action === 'accept') {
             WHERE appointment_id=$id
         ";
     }
+
+    if (!mysqli_query($conn, $sql)) {
+        die("SQL Error: " . mysqli_error($conn));
+    }
+
+    echo "Accepted successfully";
+}
+
+elseif ($action === 'reject') {
+
+    $sql = "UPDATE appointments SET status='Canceled' WHERE appointment_id=$id";
+
+    if (!mysqli_query($conn, $sql)) {
+        die("SQL Error: " . mysqli_error($conn));
+    }
+
+    echo "Rejected successfully";
+}
+
+elseif ($action === 'complete') {
+
+    $sql = "UPDATE appointments SET status='Completed' WHERE appointment_id=$id";
+
+    if (!mysqli_query($conn, $sql)) {
+        die("SQL Error: " . mysqli_error($conn));
+    }
+
+    echo "Completed successfully";
+}
+
+else {
+    echo "Invalid action";
+}
