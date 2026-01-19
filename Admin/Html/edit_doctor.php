@@ -17,11 +17,14 @@ include "../PHP/Fetch_doctor.php";
         <h1>Edit Doctor</h1>
         <p>Update doctor information</p>
     </div>
+     <?php if (isset($_GET['success'])) { ?>
+        <div class="success-msg">Doctor updated successfully</div>
+    <?php } ?>
 
         <div class="edit-container">
 
         <div class="edit form-section">
-            <form method="POST" action="update_doctor.php" enctype="multipart/form-data">
+            <form method="POST" action="../PHP/update_doctor.php" enctype="multipart/form-data">
 
                 <input type="hidden" name="doctor_id" value="<?= $doctor['doctor_id']; ?>">
 
