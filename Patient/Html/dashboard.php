@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prescripto | Doctor Appointment</title>
+    <title>Consultation time | Doctor Appointment</title>
     <link rel="stylesheet" href="../Css/dashboard.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
 <section class="hero">
     <div class="hero-text">
-        <h1>Book Appointment<br>With Trusted Doctors</h1>
+        <h1>Book Appointments<br>With Trusted Doctors</h1>
         <p>Simply browse through our extensive list of trusted doctors and schedule your appointment hassle-free.</p>
         <button>Book appointment</button>
     </div>
