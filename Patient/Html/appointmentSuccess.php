@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Success</title>
-    <link rel="stylesheet" href="../css/success.css">
+    <link rel="stylesheet" href="../Css/success.css">
 </head>
 <body>
 
