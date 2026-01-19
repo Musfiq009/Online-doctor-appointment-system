@@ -11,7 +11,7 @@
 <header class="navbar">
     <div class="logo">Consultation Time</div>
     <nav>
-        <a href="dashboard.php">Dashboard</a>
+        <a href="logedinDashboard.php">Dashboard</a>
         <a href="bookappointment.php">Appointments</a>
         <a href="../php/logout.php">Logout</a>
     </nav>
