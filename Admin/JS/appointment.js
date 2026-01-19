@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(btn) btn.classList.add("active");
 
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "get_appointments.php?status=" + status, true);
+        xhttp.open("GET", "../PHP/get_appointment.php?status=" + status, true);
         xhttp.onreadystatechange = function() {
             if(xhttp.readyState === 4){
                 if(xhttp.status === 200){
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET","update_appointment_status.php?action=accept&id="+id+"&time="+encodeURIComponent(time),true);
+        xhttp.open("GET","../PHP/update_appointment_status.php?action=accept&id="+id+"&time="+encodeURIComponent(time),true);
         xhttp.onreadystatechange = function(){
             if(xhttp.readyState===4 && xhttp.status===200){
                 console.log("Accept Response:", xhttp.responseText);
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     window.rejectAppointment = function(id){
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET","update_appointment_status.php?action=reject&id="+id,true);
+        xhttp.open("GET","../PHP/update_appointment_status.php?action=reject&id="+id,true);
         xhttp.onreadystatechange = function(){
             if(xhttp.readyState===4 && xhttp.status===200){
                 console.log("Reject Response:", xhttp.responseText);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.completeAppointment = function(id){
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET","update_appointment_status.php?action=complete&id="+id,true);
+        xhttp.open("GET","../PHP/update_appointment_status.php?action=complete&id="+id,true);
         xhttp.onreadystatechange = function(){
             if(xhttp.readyState===4 && xhttp.status===200){
                 console.log("Complete Response:", xhttp.responseText);
