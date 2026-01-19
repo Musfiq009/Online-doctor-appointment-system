@@ -82,7 +82,7 @@
 <section class="cta">
     <div class="cta-text">
         <h2>Book Appointment<br>With 100+ Trusted Doctors</h2>
-        <a href="../html/registration.php"><button>Create account</button></a>
+        <a href="../Html/registration.php"><button>Create account</button></a>
     </div>
     
 </section>

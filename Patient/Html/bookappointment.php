@@ -10,11 +10,11 @@
 <header class="navbar">
     <div class="logo">Consultation Time</div>
     <nav>
-        <a href="../html/logedinDashboard.php">Home</a>
-        <a href="../html/bookappointment.php">All Doctors</a>
+        <a href="../Html/logedinDashboard.php">Home</a>
+        <a href="../Html/bookappointment.php">All Doctors</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="../html/userprofile.php"><button>Profile</button></a>
+        <a href="../Html/userprofile.php"><button>Profile</button></a>
     </nav>
 </header>
 
@@ -33,7 +33,7 @@
     <p style="text-align:center;">Loading doctors...</p>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../JS/search.js"></script>
 
 <script>
     window.onload = function () {

@@ -1,4 +1,4 @@
-<?php include "../php/userprofile.php"; ?>
+<?php include "../PHP/userprofile.php"; ?>
 
 <!DOCTYPE html>
 <html>

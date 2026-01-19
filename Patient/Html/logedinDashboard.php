@@ -1,5 +1,5 @@
 <?php
-include "../db/configDB.php";
+include "../DB/configDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
