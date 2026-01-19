@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(btn) btn.classList.add("active");
 
         var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "../PHP/get_appointment.php?status=" + status, true);
+        xhttp.open("GET", "../PHP/get_appointments.php?status=" + status, true);
         xhttp.onreadystatechange = function() {
             if(xhttp.readyState === 4){
                 if(xhttp.status === 200){
