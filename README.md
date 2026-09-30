@@ -104,8 +104,8 @@ This reduces time, effort and the need for physical visits, while giving adminis
 | Async | `XMLHttpRequest` (AJAX) for search, tab loading, status updates and deletes |
 | Backend | PHP (procedural, `mysqli`) |
 | Database | MySQL / MariaDB |
-| Auth | PHP Sessions (`$_SESSION`), `password_hash()` / `password_verify()` |
-| Local server | XAMPP / WAMP / Laragon (Apache + MySQL) |
+| Auth | PHP Sessions (`$_SESSION`), `password_hash()` |
+| Local server | XAMPP (Apache + MySQL) |
 
 ---
 
