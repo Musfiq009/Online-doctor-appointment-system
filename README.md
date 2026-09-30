@@ -226,7 +226,7 @@ VALUES ('admin', 'Admin', 'admin@example.com', 'admin123', '01700000001');
 1. **Clone the repository** into your web root (`htdocs` for XAMPP):
 
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
+   git clone https://github.com/Musfiq009/Online-doctor-appointment-system.git
    ```
 
 2. **Start** Apache and MySQL from the XAMPP control panel.
