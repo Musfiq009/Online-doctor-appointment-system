@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Patient Login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../Css/login.css">
 </head>
 <body>
 
 <div class="login-container">
-    <h2>Patient Login</h2>
+    <h2>Login</h2>
     <p class="subtitle">Access your appointments </p>
 
     <?php
