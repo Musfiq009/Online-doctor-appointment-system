@@ -238,6 +238,7 @@ VALUES ('admin', 'Admin', 'admin@example.com', 'admin123', '01700000001');
    - `Admin/DB/configDB.php`
    - `Patient/DB/configDB.php`
 
+
    ```php
    $host   = "localhost";
    $user   = "root";
@@ -245,7 +246,6 @@ VALUES ('admin', 'Admin', 'admin@example.com', 'admin123', '01700000001');
    $dbname = "online doctor appointment and diagnostic management";
    ```
 
-   > ⚠️ In the current code the two files use slightly **different database names** (`...appointment and diagnostic management` vs `...appointmentment and diagnostic system`). Make both identical before running.
 
 5. **Make the Admin image folder writable** so doctor photo uploads work: `Admin/Images/`.
 
@@ -255,9 +255,9 @@ VALUES ('admin', 'Admin', 'admin@example.com', 'admin123', '01700000001');
 
    | Page | URL |
    |------|-----|
-   | Public landing page | `http://localhost/<repo-name>/Patient/Html/dashboard.php` |
-   | Login (patients & admin) | `http://localhost/<repo-name>/Patient/Html/login.php` |
-   | Registration | `http://localhost/<repo-name>/Patient/Html/registration.php` |
+   | Public landing page | `http://localhost/Online-doctor-appointment-system/Patient/Html/dashboard.php` |
+   | Login (patients & admin) | `http://localhost/Online-doctor-appointment-system/Patient/Html/login.php` |
+   | Registration | `http://localhost/Online-doctor-appointment-system/Patient/Html/registration.php` |
 
 ### Default Access
 
